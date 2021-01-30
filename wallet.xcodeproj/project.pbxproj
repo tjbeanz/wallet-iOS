@@ -9,6 +9,24 @@
 /* Begin PBXBuildFile section */
 		4ED0B2DF3AD647A603154AA6 /* InformationLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0BB2EA5F0AA019AF2C10A /* InformationLogger.swift */; };
 		6360BE865570CCDF5C814E4E /* libPods-certificatesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F8BC2D27986317037BFD9D /* libPods-certificatesTests.a */; };
+		82369B1825C3B180006F97CA /* AddCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF82B921384E2C008EC1FA /* AddCredentialViewController.swift */; };
+		82369B3525C3B20D006F97CA /* CertificateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DE6CF1F3B659800185A49 /* CertificateManager.swift */; };
+		82369B3B25C3B233006F97CA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372F2F41FA12421007F0BC2 /* Logger.swift */; };
+		82369B3E25C3B2C3006F97CA /* AddCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF82B921384E2C008EC1FA /* AddCredentialViewController.swift */; };
+		82369B4425C3B2E1006F97CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DE6D51F3B67F400185A49 /* Constants.swift */; };
+		82369B4A25C3B456006F97CA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DE6D41F3B67F400185A49 /* Extensions.swift */; };
+		82369B4D25C3B4DD006F97CA /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92735592031E1C9002361FD /* AlertViewController.swift */; };
+		82369B5225C3B4F9006F97CA /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF834D21470884008EC1FA /* Localizations.swift */; };
+		82369B5725C3B512006F97CA /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D2B049202B5893002015F0 /* UIElements.swift */; };
+		82369B5C25C3B521006F97CA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6511912126053E009AC972 /* Reachability.swift */; };
+		82369B6325C3B54F006F97CA /* AppVersionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE74255D212F479C00B2DAF7 /* AppVersionCheck.swift */; };
+		82369B6825C3B55C006F97CA /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A961EBC62028BE020016CD1E /* Style.swift */; };
+		82369B6B25C3B56E006F97CA /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92735592031E1C9002361FD /* AlertViewController.swift */; };
+		82369B6E25C3B574006F97CA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6511912126053E009AC972 /* Reachability.swift */; };
+		82369B7125C3B57D006F97CA /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D2B049202B5893002015F0 /* UIElements.swift */; };
+		82369B7425C3B584006F97CA /* AppVersionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE74255D212F479C00B2DAF7 /* AppVersionCheck.swift */; };
+		82369B7725C3B58E006F97CA /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF834D21470884008EC1FA /* Localizations.swift */; };
+		82369B7A25C3B59E006F97CA /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A961EBC62028BE020016CD1E /* Style.swift */; };
 		830120351EF4483F008EC454 /* ArgumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830120341EF4483F008EC454 /* ArgumentParser.swift */; };
 		830120381EF44AE5008EC454 /* ArgumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830120341EF4483F008EC454 /* ArgumentParser.swift */; };
 		830260261F59D70700412C8B /* testnet-2017-09-01.json in Resources */ = {isa = PBXBuildFile; fileRef = 830260251F59D70200412C8B /* testnet-2017-09-01.json */; };
@@ -172,6 +190,8 @@
 		594401EA232C3BCD000ECDCA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5AB11E45F387B18A58FCF2A4 /* Pods-certificates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-certificates.release.xcconfig"; path = "Pods/Target Support Files/Pods-certificates/Pods-certificates.release.xcconfig"; sourceTree = "<group>"; };
 		7A35288CE0EE9C6B8329C464 /* Pods-certificatesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-certificatesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-certificatesUITests/Pods-certificatesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		821252FA25C10F8D003CB2DA /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82369B7D25C3B5F3006F97CA /* libOpenSans.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libOpenSans.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		830120341EF4483F008EC454 /* ArgumentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgumentParser.swift; path = Utils/ArgumentParser.swift; sourceTree = "<group>"; };
 		830260251F59D70200412C8B /* testnet-2017-09-01.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "testnet-2017-09-01.json"; sourceTree = "<group>"; };
 		830AB9EE1DA6BC4B00185E19 /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -554,6 +574,8 @@
 		A653FD3709C0B4FB37E36B2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82369B7D25C3B5F3006F97CA /* libOpenSans.a */,
+				821252FA25C10F8D003CB2DA /* CommonCrypto.framework */,
 				A92E89672049A63D0035460B /* liblottie-ios.a */,
 				83FF5DE61ECBA4100063397C /* Blockcerts.framework */,
 				830AB9EE1DA6BC4B00185E19 /* CommonCrypto.framework */,
@@ -583,7 +605,7 @@
 			buildConfigurationList = 83111B4C1DA4110C006B058D /* Build configuration list for PBXNativeTarget "certificates" */;
 			buildPhases = (
 				C4F92AA0A7F6B12082D77826 /* [CP] Check Pods Manifest.lock */,
-				EEAF82D121405E54008EC1FA /* ShellScript */,
+				EEAF82D121405E54008EC1FA /* Run Script */,
 				83111B201DA4110C006B058D /* Sources */,
 				83111B211DA4110C006B058D /* Frameworks */,
 				83111B221DA4110C006B058D /* Resources */,
@@ -826,13 +848,14 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EEAF82D121405E54008EC1FA /* ShellScript */ = {
+		EEAF82D121405E54008EC1FA /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -918,6 +941,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82369B6825C3B55C006F97CA /* Style.swift in Sources */,
+				82369B6325C3B54F006F97CA /* AppVersionCheck.swift in Sources */,
+				82369B5C25C3B521006F97CA /* Reachability.swift in Sources */,
+				82369B5725C3B512006F97CA /* UIElements.swift in Sources */,
+				82369B5225C3B4F9006F97CA /* Localizations.swift in Sources */,
+				82369B4D25C3B4DD006F97CA /* AlertViewController.swift in Sources */,
+				82369B3E25C3B2C3006F97CA /* AddCredentialViewController.swift in Sources */,
 				838DE6CC1F3A753B00185A49 /* ManagedIssuer.swift in Sources */,
 				83071D251F42551600142D82 /* ArgumentParserTests.swift in Sources */,
 				83071D261F42552200142D82 /* ManagedIssuerTests.swift in Sources */,
@@ -941,6 +971,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82369B7A25C3B59E006F97CA /* Style.swift in Sources */,
+				82369B7725C3B58E006F97CA /* Localizations.swift in Sources */,
+				82369B7425C3B584006F97CA /* AppVersionCheck.swift in Sources */,
+				82369B7125C3B57D006F97CA /* UIElements.swift in Sources */,
+				82369B6E25C3B574006F97CA /* Reachability.swift in Sources */,
+				82369B6B25C3B56E006F97CA /* AlertViewController.swift in Sources */,
+				82369B4A25C3B456006F97CA /* Extensions.swift in Sources */,
+				82369B4425C3B2E1006F97CA /* Constants.swift in Sources */,
+				82369B3B25C3B233006F97CA /* Logger.swift in Sources */,
+				82369B3525C3B20D006F97CA /* CertificateManager.swift in Sources */,
+				82369B1825C3B180006F97CA /* AddCredentialViewController.swift in Sources */,
 				836075271F2A4D9800758C9E /* OnboardingUITests.swift in Sources */,
 				8332F5621F475512002534D0 /* ExistingIssuerTests.swift in Sources */,
 				833E674B1F47925E00773563 /* MainnetCertificateTests.swift in Sources */,
@@ -1191,6 +1232,41 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = walletTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OpenSans\"",
+					"\"${PODS_ROOT}/OpenSSL-Universal/lib-ios\"",
+				);
+				OTHER_CFLAGS = (
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/OpenSSL-Universal\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"crypto\"",
+					"-l\"ssl\"",
+					"-l\"OpenSans\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Bugsee\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.learningmachine.walletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "wallet/walletTests-Bridging-Header.h";
@@ -1210,6 +1286,41 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = walletTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OpenSans\"",
+					"\"${PODS_ROOT}/OpenSSL-Universal/lib-ios\"",
+				);
+				OTHER_CFLAGS = (
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/OpenSSL-Universal\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"crypto\"",
+					"-l\"ssl\"",
+					"-l\"OpenSans\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Bugsee\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.learningmachine.walletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "wallet/walletTests-Bridging-Header.h";
@@ -1226,10 +1337,46 @@
 				DEVELOPMENT_TEAM = CYEWR6MU44;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = certificatesUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OpenSans\"",
+					"\"${PODS_ROOT}/OpenSSL-Universal/lib-ios\"",
+				);
+				OTHER_CFLAGS = (
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/OpenSSL-Universal\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"crypto\"",
+					"-l\"ssl\"",
+					"-l\"OpenSans\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Bugsee\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.learningmachine.certificatesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "wallet/walletUITests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = certificates;
 			};
@@ -1243,10 +1390,46 @@
 				DEVELOPMENT_TEAM = CYEWR6MU44;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = certificatesUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OpenSans\"",
+					"\"${PODS_ROOT}/OpenSSL-Universal/lib-ios\"",
+				);
+				OTHER_CFLAGS = (
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/OpenSSL-Universal\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"crypto\"",
+					"-l\"ssl\"",
+					"-l\"OpenSans\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Bugsee\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.learningmachine.certificatesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "wallet/walletUITests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = certificates;
 			};
