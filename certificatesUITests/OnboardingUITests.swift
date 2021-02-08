@@ -30,21 +30,19 @@ class OnboardingUITests: XCTestCase {
     
     func testGeneratedPassphraseMatchesSettingsPassphrase() {
         let app = XCUIApplication()
-        app.buttons["NEW ACCOUNT"].tap()
-        app.buttons["GENERATE PASSPHRASE"].tap()
+        app.buttons["New User"].tap()
+        app.buttons["Create Backup"].tap()
+        app.buttons["Manual Hard Copy"].tap()
         
         // Capture the generated passphrase
-        let generatedPassphrase = app.staticTexts.matching(identifier: "GeneratedPassphrase").element(boundBy: 0).label
+        let generatedPassphrase = app.staticTexts["passphrase-text"].label
         XCTAssertFalse(generatedPassphrase.isEmpty)
         
-        app.buttons["DONE"].tap()
-        
+        app.buttons["manual-backup-done"].tap()
+        app.buttons["continue-button"].tap()
 
-        // Something is strange with this. The test passes when run alone, but fails when run in a group.
-        // Watching the simulator, this button absolutely exists. However, checking its existence fails. As does
-        // setting a predicate to wait for its existence.
-//        let settingsButton = app.navigationBars["certificates.IssuerCollectionView"].buttons["Settings"]
-//        XCTAssertTrue(settingsButton.exists)
+        let settingsButton = app.navigationBars["Blockcerts Wallet"].buttons["Settings"]
+        XCTAssertTrue(settingsButton.exists)
         
         // TODO: This test can really only be useful when we can compare the generated passphrase with that displayed on the settings page.
         // We'll be able to pass the touchid check in xcode 9. Just not before then.
@@ -56,17 +54,16 @@ class OnboardingUITests: XCTestCase {
     
     func testSuppliedPassphraseMatchesSettingsPassphrase() {
         let app = XCUIApplication()
-        app.buttons["I ALREADY HAVE ONE"].tap()
+        app.buttons["Current User"].tap()
         
         let scrollViewsQuery = app.scrollViews
-        let textView = scrollViewsQuery.otherElements.containing(.image, identifier:"Logo").children(matching: .other).element.children(matching: .textView).element
+        let textView = scrollViewsQuery.otherElements.containing(.staticText, identifier:"Enter Passphrase").children(matching: .textView).element
         textView.tap()
         textView.typeText(testPassphrase)
-        app.buttons["Done"].tap()
+        app.buttons["Enter"].tap()
 
-        let settingsButton = app.navigationBars["certificates.IssuerCollectionView"].buttons["Settings"]
+        let settingsButton = app.navigationBars["Blockcerts Wallet"].buttons["Settings"]
         XCTAssertTrue(settingsButton.exists)
-        
         
         // TODO: This test can really only be useful when we can compare the generated passphrase with that displayed on the settings page.
         // We'll be able to pass the touchid check in xcode 9. Just not before then.
@@ -94,9 +91,9 @@ class PostOnboardingUITests : XCTestCase {
     func testLandingOnIssuerScreenIfPassphraseExists() {
         let app = XCUIApplication()
         
-        XCTAssertFalse(app.buttons["I ALREADY HAVE ONE"].exists)
+        XCTAssertFalse(app.buttons["Current User"].exists)
         
-        let settingsButton = app.navigationBars["certificates.IssuerCollectionView"].buttons["Settings"]
+        let settingsButton = app.navigationBars["Blockcerts Wallet"].buttons["Settings"]
         XCTAssertTrue(settingsButton.exists)
     }
     

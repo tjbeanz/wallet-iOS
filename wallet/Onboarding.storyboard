@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gKt-0J-INy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gKt-0J-INy">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,6 +69,7 @@
                                 <rect key="frame" x="82" y="0.0" width="250" height="52"/>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="an8-p7-2zd"/>
                         <color key="backgroundColor" red="0.060152135789394379" green="0.14074519276618958" blue="0.30589857697486877" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="qKJ-hu-YmP" secondAttribute="trailing" id="BFh-mC-Y9j"/>
@@ -81,7 +82,6 @@
                             <constraint firstItem="rU6-4J-hvL" firstAttribute="top" secondItem="an8-p7-2zd" secondAttribute="top" id="lqN-0Q-3Ao"/>
                             <constraint firstItem="qKJ-hu-YmP" firstAttribute="top" secondItem="uWO-Mc-lvh" secondAttribute="bottom" constant="8" id="vhZ-Ij-9SM"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="an8-p7-2zd"/>
                     </view>
                     <navigationItem key="navigationItem" id="ima-vz-6aP"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -142,7 +142,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Welcome to the new Blockcerts Wallet!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krn-fT-lMh" customClass="LabelC3T5S" customModule="certificates" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="68" width="334" height="20.333333333333343"/>
+                                                <rect key="frame" x="20" y="68" width="334" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -180,6 +180,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="wtU-C7-rD6"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CO2-bx-nC6" firstAttribute="leading" secondItem="wtU-C7-rD6" secondAttribute="leading" id="2Hj-xC-xkw"/>
@@ -189,7 +190,6 @@
                             <constraint firstItem="kZe-ki-NCg" firstAttribute="leading" secondItem="wtU-C7-rD6" secondAttribute="leading" constant="20" id="QAi-VR-KnQ"/>
                             <constraint firstItem="wtU-C7-rD6" firstAttribute="bottom" secondItem="CO2-bx-nC6" secondAttribute="bottom" id="W4w-JN-XFD"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="wtU-C7-rD6"/>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="kZe-ki-NCg" id="AqV-D3-Odd"/>
@@ -281,6 +281,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hhw-oT-cp2"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vY5-pE-shK" firstAttribute="top" secondItem="Hhw-oT-cp2" secondAttribute="top" id="4FJ-Rh-Pg0"/>
@@ -290,7 +291,6 @@
                             <constraint firstItem="vY5-pE-shK" firstAttribute="leading" secondItem="Hhw-oT-cp2" secondAttribute="leading" id="cgk-Jz-H3p"/>
                             <constraint firstItem="Hhw-oT-cp2" firstAttribute="trailing" secondItem="vY5-pE-shK" secondAttribute="trailing" id="ssg-of-xsF"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Hhw-oT-cp2"/>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="aUC-ws-ppc" id="1hj-Ll-MGD"/>
@@ -410,6 +410,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="MDz-Qu-2bE"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pHt-mR-CiN" firstAttribute="leading" secondItem="MDz-Qu-2bE" secondAttribute="leading" id="EnU-D6-2Ik"/>
@@ -419,7 +420,6 @@
                             <constraint firstItem="pHt-mR-CiN" firstAttribute="top" secondItem="MDz-Qu-2bE" secondAttribute="top" id="nR9-Cu-p8N"/>
                             <constraint firstItem="MDz-Qu-2bE" firstAttribute="trailing" secondItem="RyP-ht-mHB" secondAttribute="trailing" constant="20" id="uL3-uH-eo9"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="MDz-Qu-2bE"/>
                     </view>
                     <navigationItem key="navigationItem" id="bQl-QP-8rb"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
@@ -493,6 +493,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iB4-IF-EY4" customClass="PrimaryButton" customModule="certificates" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="334" width="374" height="34"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="continue-button"/>
                                                 <state key="normal" title="_Select At Least One to Continue"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="LocalizedText" value="SelectOneButton"/>
@@ -533,6 +534,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="dKG-8E-gdh"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dKG-8E-gdh" firstAttribute="bottom" secondItem="S9L-es-UFv" secondAttribute="bottom" id="4cO-I6-b1G"/>
@@ -543,7 +545,6 @@
                             <constraint firstItem="dKG-8E-gdh" firstAttribute="trailing" secondItem="WqY-ow-1Di" secondAttribute="trailing" constant="20" id="eOT-CI-Vtw"/>
                             <constraint firstItem="S9L-es-UFv" firstAttribute="top" secondItem="dKG-8E-gdh" secondAttribute="top" id="ybX-wB-LB7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dKG-8E-gdh"/>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="WqY-ow-1Di" id="wWD-a3-RLQ"/>
@@ -600,6 +601,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pass phrase generate electricity dynamo femur shake fries joystick corgi jingle wall sticker sandwich soup pencil coffee" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sq-he-eXT" customClass="LabelC1T4S" customModule="certificates" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="12" width="342" height="61"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="passphrase-text"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -620,6 +622,7 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImO-LW-82b" customClass="PrimaryButton" customModule="certificates" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="330.66666666666669" width="374" height="34"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="manual-backup-done"/>
                                                 <state key="normal" title="_Done"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="LocalizedText" value="Done"/>
@@ -657,6 +660,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="h5x-Uy-Rvu"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pC5-bs-3BH" firstAttribute="top" secondItem="h5x-Uy-Rvu" secondAttribute="top" id="5Xa-Vt-ddJ"/>
@@ -666,7 +670,6 @@
                             <constraint firstItem="MI6-7Y-4vX" firstAttribute="leading" secondItem="h5x-Uy-Rvu" secondAttribute="leading" constant="20" id="iLU-ha-8DB"/>
                             <constraint firstItem="h5x-Uy-Rvu" firstAttribute="trailing" secondItem="MI6-7Y-4vX" secondAttribute="trailing" constant="20" id="osT-kk-el4"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="h5x-Uy-Rvu"/>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="MI6-7Y-4vX" id="Uu1-aI-xpF"/>
@@ -697,6 +700,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pass phrase generate electricity dynamo femur shake fries joystick corgi jingle wall sticker sandwich soup pencil coffee" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztA-az-KD6" customClass="LabelC1T4S" customModule="certificates" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="11.999999999999993" width="342" height="61.000000000000007"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="passphrase-text"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -757,6 +761,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gap-WT-z7g"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JFd-9l-iht" firstAttribute="top" secondItem="Gap-WT-z7g" secondAttribute="top" id="17P-0U-ebm"/>
@@ -766,7 +771,6 @@
                             <constraint firstItem="Gap-WT-z7g" firstAttribute="trailing" secondItem="JFd-9l-iht" secondAttribute="trailing" id="S8U-dU-5WI"/>
                             <constraint firstItem="Vxr-dN-nYu" firstAttribute="leading" secondItem="Gap-WT-z7g" secondAttribute="leading" constant="20" id="rpu-7N-ICu"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Gap-WT-z7g"/>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="Vxr-dN-nYu" id="faj-RF-jmP"/>
@@ -780,13 +784,96 @@
             <point key="canvasLocation" x="5279.7101449275369" y="473.64130434782612"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="4vj-p9-n0G">
+            <size key="intrinsicContentSize" width="640" height="20.333333333333332"/>
+        </designable>
+        <designable name="5Sq-he-eXT">
+            <size key="intrinsicContentSize" width="902.66666666666663" height="20.333333333333332"/>
+        </designable>
+        <designable name="8iX-rK-XlR">
+            <size key="intrinsicContentSize" width="231" height="34"/>
+        </designable>
+        <designable name="8z5-Yg-UUa">
+            <size key="intrinsicContentSize" width="97.666666666666671" height="20.333333333333332"/>
+        </designable>
+        <designable name="BkJ-EG-3bX">
+            <size key="intrinsicContentSize" width="53" height="34"/>
+        </designable>
+        <designable name="DQM-Bm-Iw4">
+            <size key="intrinsicContentSize" width="187" height="20.333333333333332"/>
+        </designable>
+        <designable name="H3k-Qr-aZc">
+            <size key="intrinsicContentSize" width="337.66666666666669" height="20.333333333333332"/>
+        </designable>
+        <designable name="IRC-qm-tMU">
+            <size key="intrinsicContentSize" width="190.33333333333334" height="20.333333333333332"/>
+        </designable>
+        <designable name="ImO-LW-82b">
+            <size key="intrinsicContentSize" width="53" height="34"/>
+        </designable>
+        <designable name="MEY-4S-zBG">
+            <size key="intrinsicContentSize" width="142" height="34"/>
+        </designable>
+        <designable name="McB-xV-fyP">
+            <size key="intrinsicContentSize" width="787.66666666666663" height="20.333333333333332"/>
+        </designable>
+        <designable name="OGc-Ah-B2Q">
+            <size key="intrinsicContentSize" width="231" height="34"/>
+        </designable>
+        <designable name="PE0-wT-KoM">
+            <size key="intrinsicContentSize" width="143.33333333333334" height="20.333333333333332"/>
+        </designable>
+        <designable name="ZZ0-U4-Kxs">
+            <size key="intrinsicContentSize" width="177.33333333333334" height="20.333333333333332"/>
+        </designable>
+        <designable name="bHu-At-8Ka">
+            <size key="intrinsicContentSize" width="125.33333333333333" height="20.333333333333332"/>
+        </designable>
+        <designable name="dCG-WK-gg0">
+            <size key="intrinsicContentSize" width="441" height="20.333333333333332"/>
+        </designable>
+        <designable name="ffR-78-xzB">
+            <size key="intrinsicContentSize" width="82" height="34"/>
+        </designable>
+        <designable name="iB4-IF-EY4">
+            <size key="intrinsicContentSize" width="266" height="34"/>
+        </designable>
+        <designable name="krn-fT-lMh">
+            <size key="intrinsicContentSize" width="304.33333333333331" height="20.333333333333332"/>
+        </designable>
+        <designable name="qKJ-hu-YmP">
+            <size key="intrinsicContentSize" width="89" height="30"/>
+        </designable>
+        <designable name="tFl-gf-qas">
+            <size key="intrinsicContentSize" width="151" height="34"/>
+        </designable>
+        <designable name="tl7-ac-PeD">
+            <size key="intrinsicContentSize" width="180" height="20.333333333333332"/>
+        </designable>
+        <designable name="uWO-Mc-lvh">
+            <size key="intrinsicContentSize" width="89" height="34"/>
+        </designable>
+        <designable name="vDS-eb-6Ul">
+            <size key="intrinsicContentSize" width="902.66666666666663" height="20.333333333333332"/>
+        </designable>
+        <designable name="z6G-c0-sOB">
+            <size key="intrinsicContentSize" width="771.66666666666663" height="20.333333333333332"/>
+        </designable>
+        <designable name="z88-Iu-wjr">
+            <size key="intrinsicContentSize" width="768.66666666666663" height="20.333333333333332"/>
+        </designable>
+        <designable name="ztA-az-KD6">
+            <size key="intrinsicContentSize" width="902.66666666666663" height="20.333333333333332"/>
+        </designable>
+    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="aCt-1w-xH5"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="blockcerts_logo" width="250" height="52"/>
         <image name="illo_backup" width="105" height="105"/>
         <image name="illo_success" width="105" height="105"/>
         <image name="illo_writtenbackup" width="105" height="105"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="aCt-1w-xH5"/>
-    </inferredMetricsTieBreakers>
 </document>
