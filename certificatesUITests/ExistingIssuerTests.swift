@@ -110,37 +110,37 @@ class ExistingAcceptingIssuerTests : XCTestCase {
         let app = XCUIApplication()
         let issuerTile = app.collectionViews.cells["Greendale College"]
         
-        XCTAssertEqual(app.collectionViews.cells.count, 1)
+        // The "Issuers" header counts as a cell. Header plus "Greendale College" = 2.
+        XCTAssertEqual(app.collectionViews.cells.count, 2)
         XCTAssert(issuerTile.exists)
         
         issuerTile.tap()
-        let issuerNavigationBar = app.navigationBars["Greendale College"]
+        let greendaleCollegeStaticText = app.tables.staticTexts["Greendale College"]
         
-        XCTAssert(issuerNavigationBar.exists)
+        XCTAssert(greendaleCollegeStaticText.exists)
     }
     
     func testAddingCertificateToIssuer() {
         let app = XCUIApplication()
         app.collectionViews.cells["Greendale College"].tap()
-        XCTAssertFalse(app.tables.staticTexts["Welcome to Greendale!"].exists)
+        XCTAssertFalse(app.tables.staticTexts["You're a student"].exists)
         
-        app.navigationBars["Greendale College"].buttons["add_icon"].tap()
-        app.sheets.buttons["Import Certificate from URL"].tap()
+        app.tables.buttons["Add Credential"].tap()
+        app.sheets["Add Credential"].scrollViews.otherElements.buttons["Import from URL"].tap()
         
-        let alertsQuery = app.alerts
-        alertsQuery.collectionViews.textFields["URL"].typeText("http://localhost:1234/issuer/accepting/certificates/student.json")
-        alertsQuery.buttons["Import"].tap()
+        let credentialUrlTextView = app.textViews["certificate-url-text-view"]
+        XCTAssert(credentialUrlTextView.waitForExistence(timeout: 5))
+        credentialUrlTextView.tap()
+        credentialUrlTextView.typeText("http://localhost:1234/issuer/accepting/certificates/student.json")
         
-        XCTAssert(app.navigationBars["You're a student"].waitForExistence(timeout: 5))
-        app.navigationBars["You're a student"].buttons["Greendale College"].tap()
-
-        XCTAssert(app.navigationBars["Greendale College"].exists)
-        XCTAssert(app.tables.staticTexts["Welcome to Greendale!"].exists)
-//
-//
-//        let app = XCUIApplication()
-//        app.collectionViews.cells["Greendale College"].tap()
-//        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Welcome to Greendale!"]/*[[".cells.staticTexts[\"Welcome to Greendale!\"]",".staticTexts[\"Welcome to Greendale!\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["Import"].tap()
+        XCTAssert(app.buttons["Okay"].waitForExistence(timeout: 5))
+        app.buttons["Okay"].tap()
         
+        XCTAssert(app.navigationBars["Credential"].waitForExistence(timeout: 5))
+        app.navigationBars["Credential"].buttons["Issuer"].tap()
+        
+        XCTAssert(app.tables.staticTexts["Greendale College"].exists)
+        XCTAssert(app.tables.staticTexts["You're a student"].exists)
     }
 }

@@ -293,12 +293,7 @@ class AddCredentialURLViewController: AddCredentialViewController, UITextViewDel
         urlTextView.textColor = Style.Color.C3
         submitButton.isEnabled = false
         
-        urlContainer.isAccessibilityElement = true
-        urlContainer.accessibilityTraits = urlTextView
-            .accessibilityTraits
-        urlContainer.accessibilityHint = urlLabel.text
-        urlLabel.isAccessibilityElement = false
-        urlTextView.isAccessibilityElement = false
+        urlTextView.accessibilityHint = urlLabel.text
     }
     
     @objc func dismissModally() {
