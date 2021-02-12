@@ -31,13 +31,14 @@ class ExistingDownieIssuerTests: XCTestCase {
         let app = XCUIApplication()
         let issuerTile = app.collectionViews.cells["Downie Test Org"]
         
-        XCTAssertEqual(app.collectionViews.cells.count, 1)
+        // The "Issuers" header counts as a cell. Header plus "Downie Test Org" = 2.
+        XCTAssertEqual(app.collectionViews.cells.count, 2)
         XCTAssert(issuerTile.exists)
         
         issuerTile.tap()
-        let issuerNavigationBar = app.navigationBars["Downie Test Org"]
+        let downieTestOrgStaticText = app.tables.staticTexts["Downie Test Org"]
         
-        XCTAssert(issuerNavigationBar.exists)
+        XCTAssert(downieTestOrgStaticText.exists)
     }
     
     func testAddingSecondIssuer() {
@@ -46,8 +47,8 @@ class ExistingDownieIssuerTests: XCTestCase {
             print("\n\n\nTestAddingSecondIssuer Complete\n\n\n")
         }
         let app = XCUIApplication()
-        // We start with just one issuer
-        XCTAssertEqual(app.collectionViews.cells.count, 1)
+        // We start with just one issuer (plus the header = 2)
+        XCTAssertEqual(app.collectionViews.cells.count, 2)
         XCTAssertFalse(app.collectionViews.cells["Greendale College"].exists)
         
         // We add a second
