@@ -51,18 +51,8 @@ class AddIssuerViewController: UIViewController, ManagedIssuerDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide(notification:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
         
-        issuerURLContainer.isAccessibilityElement = true
-        issuerURLContainer.accessibilityTraits = issuerURLField.accessibilityTraits
-        issuerURLContainer.accessibilityHint = issuerURLLabel.text
-        issuerURLLabel.isAccessibilityElement = false
-        issuerURLField.isAccessibilityElement = false
-        
-        nonceContainer.isAccessibilityElement = true
-        nonceContainer.accessibilityTraits = nonceField
-            .accessibilityTraits
-        nonceContainer.accessibilityHint = nonceLabel.text
-        nonceLabel.isAccessibilityElement = false
-        nonceField.isAccessibilityElement = false
+        issuerURLField.accessibilityHint = issuerURLLabel.text
+        nonceField.accessibilityHint = nonceLabel.text
     }
 
     @IBAction func addIssuerTapped(_ sender: Any) {

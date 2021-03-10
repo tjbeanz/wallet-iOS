@@ -47,47 +47,60 @@ class ExistingDownieIssuerTests: XCTestCase {
             print("\n\n\nTestAddingSecondIssuer Complete\n\n\n")
         }
         let app = XCUIApplication()
+        
         // We start with just one issuer (plus the header = 2)
         XCTAssertEqual(app.collectionViews.cells.count, 2)
         XCTAssertFalse(app.collectionViews.cells["Greendale College"].exists)
         
         // We add a second
-        app.navigationBars["Issuers"].buttons["add_icon"].tap()
-
-        let elementsQuery = app.scrollViews.otherElements
-        let issuerUrlTextField = elementsQuery.textFields["Issuer URL"]
-        issuerUrlTextField.tap()
-        issuerUrlTextField.typeText("http://localhost:1234/issuer/accepting")
-
-        let oneTimeCodeTextField = elementsQuery.textFields["One-Time Code"]
-        oneTimeCodeTextField.tap()
-        oneTimeCodeTextField.tap()
-        oneTimeCodeTextField.typeText("12345")
-        app.navigationBars["Add Issuer"].buttons["Save"].tap()
+        app.navigationBars["Blockcerts Wallet"].buttons["Settings"].tap()
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Add Issuer"]/*[[".cells[\"Add Issuer\"].staticTexts[\"Add Issuer\"]",".staticTexts[\"Add Issuer\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+                
+        let scrollViewsQuery = app.scrollViews
+        let elementsQuery = scrollViewsQuery.otherElements
+        let issuerUrlTextView = elementsQuery.textViews["issuer-url-text-view"]
+        issuerUrlTextView.tap()
+        issuerUrlTextView.typeText("http://localhost:1234/issuer/accepting")
         
-        // We now have 2 issuers, and one of them is Greendale
-        XCTAssertEqual(app.collectionViews.cells.count, 2)
+        let oneTimeCodeTextView = elementsQuery.textViews["one-time-code-text-view"]
+        oneTimeCodeTextView.tap()
+        oneTimeCodeTextView.typeText("12345")
+        
+        elementsQuery/*@START_MENU_TOKEN@*/.staticTexts["Add Issuer"]/*[[".buttons[\"Add Issuer\"].staticTexts[\"Add Issuer\"]",".staticTexts[\"Add Issuer\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        XCTAssert(app.buttons["Okay"].waitForExistence(timeout: 5))
+        app.buttons["Okay"].tap()
+        
+        let closeButton = app.navigationBars["Settings"].buttons["Close"]
+        XCTAssert(closeButton.waitForExistence(timeout: 5))
+        closeButton.tap()
+        
+        // We now have 2 issuers (plust the header = 3), and one of them is Greendale
+        XCTAssertEqual(app.collectionViews.cells.count, 3)
         XCTAssert(app.collectionViews.cells["Greendale College"].exists)
     }
     
     func testAddingMismatchedCertificate() {
         let app = XCUIApplication()
         app.collectionViews.cells["Downie Test Org"].tap()
-        app.navigationBars["Downie Test Org"].buttons["add_icon"].tap()
-        app.sheets.buttons["Import Certificate from URL"].tap()
+        app.tables.buttons["Add Credential"].tap()
+        app.sheets["Add Credential"].scrollViews.otherElements.buttons["Import from URL"].tap()
         
-        let alertsQuery = app.alerts
-        alertsQuery.collectionViews.textFields["URL"].typeText("http://localhost:1234/issuer/accepting/certificates/student.json")
-        alertsQuery.buttons["Import"].tap()
+        let credentialUrlTextView = app.textViews["certificate-url-text-view"]
+        XCTAssert(credentialUrlTextView.waitForExistence(timeout: 5))
+        credentialUrlTextView.tap()
+        credentialUrlTextView.typeText("http://localhost:1234/issuer/accepting/certificates/student.json")
         
-        let certificateNavBar = app.navigationBars["You're a student"]
-        XCTAssert(certificateNavBar.waitForExistence(timeout: 5))
+        app.buttons["Import"].tap()
+        XCTAssert(app.buttons["Okay"].waitForExistence(timeout: 5))
+        app.buttons["Okay"].tap()
+                
+        // Back button shouldn't be to DownieTestOrg, but instead should be to Greendale College
+        XCTAssert(app.navigationBars["Credential"].waitForExistence(timeout: 5))
+        app.navigationBars["Credential"].buttons["Issuer"].tap()
         
-        // Back button shouldn't be to DownieTestOrg
-        let backButton = certificateNavBar.buttons["Greendale College"]
-        XCTAssert(backButton.exists)
-        backButton.tap()
-        XCTAssert(app.navigationBars["Greendale College"].exists)
+        XCTAssert(app.tables.staticTexts["Greendale College"].exists)
+        XCTAssert(app.tables.staticTexts["You're a student"].exists)
     }
 }
 

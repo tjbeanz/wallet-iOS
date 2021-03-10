@@ -24,6 +24,8 @@ class SettingsTableViewController: UITableViewController {
     #else
         private let isDebugBuild = false
     #endif
+    
+    var delegate: AddIssuerViewControllerDelegate?
 
     convenience init() {
         self.init(style: .grouped)
@@ -327,5 +329,6 @@ extension SettingsTableViewController: AddIssuerViewControllerDelegate {
         } else {
             Logger.main.warning("Something weird -- delegate called with nil issuer. \(#function)")
         }
+        self.delegate?.added(managedIssuer: managedIssuer)
     }
 }

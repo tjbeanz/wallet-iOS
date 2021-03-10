@@ -140,6 +140,7 @@ class IssuerCollectionViewController: UICollectionViewController {
         Logger.main.tag(tag).info("Settings button tapped")
         
         let settingsTable = SettingsTableViewController()
+        settingsTable.delegate = self
         let controller = NavigationController(rootViewController: settingsTable)
         present(controller, animated: true, completion: nil)
     }
